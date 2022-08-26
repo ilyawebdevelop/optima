@@ -1,0 +1,106 @@
+// authorize
+.authorize {
+  background-color: #fff;
+  &__title {
+    margin-bottom: 60px;
+    @media (max-width: 991px){
+      margin-bottom: 20px; 
+    }
+  }
+  .contacts__form-agreements {
+    font-size: 12px;
+    line-height: 21px; 
+    color: #4F4F4F;
+  }
+  .contacts__form {
+    @media (max-width: 991px){
+      margin-top: 20px;
+    }
+  }
+  .input-mail {
+    padding-left: 50px;
+    background: #F6F3F2 url('@img/register/mail.svg') no-repeat left 20px center;
+  }
+  .input-pass {
+    padding-left: 50px;
+    background: #F6F3F2 url('@img/register/pass.svg') no-repeat left 20px center;
+		padding-right: 50px;
+  }
+  .show-pass {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background: url('@img/icons/eye.svg') no-repeat center center / contain;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .contacts__form-row.password {  
+    position: relative;   
+  }
+  .contacts__form-agreements {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .contacts__form-agreements input {
+    top: 0;
+  }
+  .register__form-bottom {
+    margin-top: 10px;
+  }
+  .register__btn {
+   width: 95px; 
+   margin-right: 20px;
+  }
+  .register-btn-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    @media (max-width: 991px){
+      margin-bottom: 0;
+    }
+  }
+  .register-btn-text {
+    font-weight: 600;
+  }
+  .register-btn-text {
+    font-size: 12px;
+    line-height: 21px;  
+    a {
+      display: inline-block;
+      font-weight: 600;
+			transition: color .2s linear;
+      color: $orange-color;
+			&:hover {
+				color: #000;
+			}
+    }
+  }
+  &__register {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #4F4F4F;
+    @media (max-width: 991px){
+      font-size: 10px;
+      line-height: 16px;      
+    }
+    a {
+      color: #EC3B33;    
+      font-weight: 600; 
+			transition: color .2s linear; 
+			&:hover {
+				color: #000;
+			}
+      @media (max-width: 991px){
+        margin-left: 4px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.authorize-main {
+	background-color: #fff;
+}
+

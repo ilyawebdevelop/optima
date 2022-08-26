@@ -1,0 +1,126 @@
+// news
+.news {
+  overflow: hidden;
+  padding-top: 0;
+  .container {
+    padding-top: 45px;
+    position: relative;
+    &::before {
+     content: '';
+     position: absolute;
+     top: 0;   
+     background-color: #CCCCCC;
+     height: 1px;
+     width: 100%;
+     left: 0;
+   }
+  }
+  &__slider {
+    @media (max-width: 991px){
+      overflow: visible;
+    }
+    @media (max-width: 575px){
+      padding-right: 75px;
+    }
+  }
+  &__slide {
+    &-img {
+      transition: opacity .2s linear;
+      border-top-left-radius: 25px;
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      @media (max-width: 991px){
+        border-top-left-radius: 15px;
+      }
+      &:hover {
+        opacity: .7;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        background: #F6F3F2 url('@img/reviews/top-right.svg') no-repeat center center / contain;
+        width: 45px;
+        height: 45px;
+      } 
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+    &-content {
+      padding: 30px 45px;
+      background-color: #fff;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      @media (max-width: 991px){
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+      @media (max-width: 575px){
+        padding: 10px 10px 15px;
+      }
+    }
+    &-title {  
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      color: #1E1E1E;      
+      margin-bottom: 15px;
+			width: fit-content;
+			position: relative;
+			&:hover {
+				opacity: 1;
+				&::after {
+					width: 100%;
+				}
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -6px;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background-color: #4F4F4F;
+				transition: width .2s linear;
+			}     
+      @media (max-width: 991px){
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &-text {
+      padding-bottom: 30px;
+      @media (max-width: 991px){
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    &-date {
+      font-size: 13px;
+      line-height: 16px;  
+      color: #F26C4F;      
+    }
+  }
+  .swiper-slide {
+    width: 460px;
+    transition: opacity .2s linear;
+  }
+  .swiper-slide-next {
+    @media (max-width: 991px){
+      opacity: .3;
+      transition: opacity .2s linear;
+    }   
+  }
+}

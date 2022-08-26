@@ -1,0 +1,61 @@
+<!-- contacts -->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-xl-5">
+        <h2 class="contacts__title section-title">
+          Контакты
+        </h2>
+        <div class="contacts__row">
+          <div class="contacts__name">Адрес:</div>
+          <div class="contacts__text">Город, улица, дом</div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">Телефон:</div>
+          <a class="contacts__link" href="tel:+78001234567">+7 800 123 45-67</a>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">Другие способы связи:</div>
+          <a href="#" class="contacts__chat first">+7 800 123 45-67</a>
+          <a href="#" class="contacts__chat second">+7 800 123 45-67</a>
+        </div>
+        <div class="socials-contacts">
+          @@include('socials.html',{})
+        </div>       
+      </div>
+      <div class="col-lg-8 col-xl-7">
+        <form action="#" class="contacts__form">
+          <h3 class="contacts__form-title">
+            Остались вопросы?
+          </h3>
+          <div class="contacts__form-descr">
+            Отправьте нам свой вопрос и мы ответим вам в кратчайшие сроки
+          </div>
+          <div class="contacts__form-content">
+            <div class="contacts__form-row">
+              <input class="contacts__form-input" type="text" placeholder="Ваше ФИО*">
+            </div>
+            <div class="contacts__form-row contacts__form-row-double">
+              <input class="contacts__form-input" type="email" placeholder="Ваш email">
+              <input class="contacts__form-input" type="tel" placeholder="Ваш телефон*">
+            </div>
+            <div class="contacts__form-row">
+              <textarea name="contacts-textarea" id="contacts-textarea_id" placeholder="Ваше сообщение"></textarea>
+            </div>
+          </div>
+          <div class="contacts__form-bottom d-flex align-items-start align-items-sm-center">
+            <button class="contacts__form-btn">
+              <span>Отправить</span>
+            </button>
+            <div class="contacts__form-agreements">
+              <input type="checkbox" id="contacts__form-checkbox">
+              <label for="contacts__form-checkbox">Согласие на обработку персональных данных</label>
+            </div>
+          </div>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal-title"></div>

@@ -1,0 +1,49 @@
+<!-- profile -->
+<section class="profile" id="profile">
+  <div class="profile-back d-flex d-lg-none">   
+    <div class="container d-flex justify-content-between">
+      <div class="profile-back__left d-flex align-items-center">
+        <a href="#"><img src="@img/profile/arrow-back.svg" alt="icon"></a>
+        <span>Профиль пользователя</span>
+      </div>
+      <div class="profile-back__right">
+        <a href="#"><img src="@img/profile/person.svg" alt="icon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">      
+        @@include('sidebar.html',{})
+      </div>
+      <div class="col-lg-9">
+        <div class="profile__right">
+          <div class="profile__image">
+            <img src="@img/profile/profile-image.png" alt="image">
+          </div>
+          <div class="profile__content">
+            <div class="profile__name">
+              Калинина
+              Инна Игоревна
+            </div>
+            <div class="profile__requisites">
+              <div class="profile__requisites-name">ИНН:</div>
+              <div class="profile__requisites-text">1234567890</div>
+            </div>
+            <div class="profile__requisites">
+              <div class="profile__requisites-name">Паспорт:</div>
+              <div class="profile__requisites-text">серия АБ-12 369852</div>
+            </div>
+            <div class="profile__change">
+              <button class="profile__change-info contacts__form-btn">
+                <span>Редактировать информацию</span>                
+              </button>
+              <button class="profile__change-pass">Сменить пароль</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

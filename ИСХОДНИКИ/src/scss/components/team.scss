@@ -1,0 +1,127 @@
+// team
+.team {
+  overflow: hidden;
+  background-image: url('@img/team/team-bg.svg');
+  background-position: left bottom;
+  background-size: cover;
+  padding-bottom: 168px;
+  
+  &__title {
+    color: #fff;
+    @media (max-width: 440px){
+      max-width: 160px;
+    }
+  }
+  .swiper {
+		padding-right: 100px;
+    @media (max-width: 991px){
+      overflow: visible;
+    }   
+    @media (max-width: 575px){
+      padding-right: 80px;
+    }
+  }
+  .swiper-slide {
+    transition: opacity .2s linear, transform .2s linear;
+    
+  }
+  .swiper-slide-next {
+    @media (max-width: 991px){
+      opacity: .3;
+      transition: opacity .2s linear, transform .2s linear;
+      transform: scale(.9);  
+    }  
+  }
+}
+.team__slide {
+  background-color: #fff;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  padding: 24px;
+  box-sizing: border-box;
+  min-height: 320px;
+  @media (max-width: 575px){
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('@img/team/top-right.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 76px;
+    height: 76px;
+    background-size: cover;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px; 
+    color: #1E1E1E;    
+    margin-bottom: 10px;
+    max-width: 200px;
+    @media (max-width: 991px){
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @media (max-width: 575px){
+      max-width: 100%;
+    }
+  }
+  &-subtitle {
+    font-size: 16px;
+    line-height: 20px; 
+    color: #F26C4F;    
+    margin-bottom: 20px;
+    max-width: 200px;
+    @media (max-width: 991px){
+      font-size: 14px;
+      line-height: 26px;
+    }
+    @media (max-width: 575px){
+      max-width: 100%;
+    }
+  }
+  &-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    min-width: 220px;
+    @media (max-width: 575px){
+      margin-bottom: 20px;
+      width: 160px;
+      height: 160px;
+      min-width: 160px;
+    }
+  }
+  &-content {
+    margin-left: 50px;
+    @media (max-width: 767px){
+      margin-left: 20px;
+    }
+    @media (max-width: 575px){
+      margin-left: 0;
+    }
+    &-block { 
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 21px;
+      color: #4F4F4F;      
+      p {
+        color: #1E1E1E;
+      }
+      @media (max-width: 991px){
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    
+  }
+ 
+}

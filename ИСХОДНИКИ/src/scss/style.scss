@@ -1,0 +1,49 @@
+// стили для модального окна
+// @import "../../node_modules/graph-modal/dist/graph-modal.min";
+// стили для табов
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+
+// стили для библиотеки aos
+// @import "../../node_modules/aos/dist/aos";
+
+// стили для свайпера
+@import "../../node_modules/swiper/swiper-bundle.min";
+// Photoswipe gallery
+@import "../../node_modules/photoswipe/dist/photoswipe";
+// @import "../../node_modules/simplebar/dist/simplebar.min";
+// Базовые подключения
+@import 'bootstrap.min';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'specifications';
+
+// Подключения компонентов страницы
+@import "./components/socials";
+@import "./components/btn";
+@import "./components/nav-slider";
+@import "./components/burger";
+@import "./components/header";
+@import "./components/intro";
+@import "./components/ways";
+@import "./components/service";
+@import "./components/steps";
+@import "./components/principle";
+@import "./components/team";
+@import "./components/prices";
+@import "./components/reviews";
+@import "./components/news";
+@import "./components/contacts";
+@import "./components/register";
+@import "./components/authorize";
+@import "./components/chat";
+@import "./components/profile";
+@import "./components/sidebar";
+@import "./components/subscribe";
+@import "./components/info";
+
+@import "./components/footer";
+
+
+

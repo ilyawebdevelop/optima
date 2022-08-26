@@ -1,0 +1,93 @@
+// steps
+.steps {
+  background-color: #fff;
+	@media (max-width: 575px){
+		padding-top: 0;
+	}
+  &__title {
+    @media (max-width: 991px){
+      margin-bottom: 15px;
+    }
+  }
+  .row {
+    margin-bottom: 60px;
+    @media (max-width: 991px){
+      margin-bottom: 30px;
+    }
+  }
+}
+.steps-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  @media (max-width: 991px){
+    padding-left: 60px!important;
+    position: relative;
+  }
+  &__num {
+    width: 80px;
+    height: 80px;
+    background-color: $orange-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #FFFFFF;    
+    @media (max-width: 991px){
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -9px;
+      left: 0;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 45px;
+    margin-bottom: 5px;
+    @media (max-width: 991px){
+      margin-top: 0;
+    }
+    @media (max-width: 575px){       
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 5px;   
+    }
+  }
+  &.first {
+  
+  }
+  &.six {
+    .steps-name__title {
+      color: $orange-color;
+    }
+  }
+}
+.steps-image {
+  
+  width: 360px;
+  box-sizing: content-box;
+  @media (max-width: 991px){
+    margin-bottom: 30px;
+  }
+  @media (max-width: 400px){
+    width: 100%;
+  }
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+.ps-8 {
+  padding-left: 120px;
+  @media (max-width: 1199px){
+    padding-left: 0;
+  }
+}

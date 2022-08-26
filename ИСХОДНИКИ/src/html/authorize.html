@@ -1,0 +1,61 @@
+<!-- authorize -->
+<section class="authorize" id="authorize">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="authorize__title">
+          Вход
+        </h2>
+        <div class="authorize__register d-flex d-lg-none">
+          <span>Еще не зарегистрированы?</span>
+          <a href="#">Зарегистрироваться</a>
+        </div>
+        <form class="contacts__form">
+          <div class="contacts__form-content">          
+            <div class="contacts__form-row">
+              <input class="contacts__form-input input-mail" type="email" placeholder="Email">             
+            </div>         
+            <div class="contacts__form-row password">
+              <input class="contacts__form-input input-pass" type="password" placeholder="Пароль" id="register-password">
+              <div class="show-pass" onclick="showPass()"></div>
+            </div>          
+          </div>
+          <div class="register__form-bottom">
+            <div class="contacts__form-agreements">
+              <input type="checkbox" id="contacts__form-agreement">
+              <label for="contacts__form-agreement">Согласен получать уведомления на указанный email-адрес</label>
+            </div>           
+            <div class="register-btn-wrapper">
+              <button class="register__btn contacts__form-btn">
+                <span>Войти</span>               
+              </button>
+              <div class="register-btn-text">              
+                <a href="#">Забыли пароль?</a>
+              </div>
+            </div>
+            <div class="authorize__register d-none d-lg-block">
+              <span>Еще не зарегистрированы?</span>
+              <a href="#">Зарегистрироваться</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="register__img">
+          <img src="@img/register/register-img.png" alt="image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showPass() {
+  var x = document.getElementById("register-password");
+  if (x.type === "password") {
+      x.type = "text";
+  } else {
+      x.type = "password";
+  }
+}
+</script>

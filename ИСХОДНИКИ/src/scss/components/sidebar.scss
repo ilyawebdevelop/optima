@@ -1,0 +1,221 @@
+// sidebar
+.sidebar {
+  background-color: #fff;
+  height: calc(100vh - 106px - 80px - 40px);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  @media (max-width: 1199px){
+    height: calc(100vh - 83px - 110px - 30px);
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    background-size: 24px;
+    border-radius: 20px;
+    // overflow: hidden;
+    transition: background-color .2s linear, background-image .2s linear;
+    margin-bottom: 8px;
+    align-items: center;
+    border: none;    
+  
+    &:hover {
+      background-color: $orange-color;           
+      &:nth-child(1) {
+        background-image: url('@img/sidebar/sidebar-1-white.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('@img/sidebar/sidebar-2-white.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('@img/sidebar/sidebar-3-white.svg');
+      }
+      &:nth-child(4) {
+        background-image: url('@img/sidebar/sidebar-4-white.svg');
+      }
+    }
+    &:nth-child(1) {
+      background-image: url('@img/sidebar/sidebar-1.svg');
+    }
+    &:nth-child(2) {
+      background-image: url('@img/sidebar/sidebar-2.svg');
+    }
+    &:nth-child(3) {
+      background-image: url('@img/sidebar/sidebar-3.svg');
+    }
+    &:nth-child(4) {
+      background-image: url('@img/sidebar/sidebar-4.svg');
+    }
+    a {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: #1E1E1E;     
+      height: 40px;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;     
+      width: 100%;
+      padding: 0  20px 0 54px;     
+      border: none;
+      transition: box-shadow .2s linear, background-color .2s linear, color .2s linear;
+      &:hover {
+        opacity: 1;         
+        color: #fff;
+      }
+    }
+
+    &.active {
+      background-color: $orange-color;    
+     
+      &:nth-child(1) {
+        background-image: url('@img/sidebar/sidebar-1-white.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('@img/sidebar/sidebar-2-white.svg');
+      }
+      &:nth-child(3) {
+        background-image: url('@img/sidebar/sidebar-3-white.svg');
+      }
+      &:nth-child(4) {
+        background-image: url('@img/sidebar/sidebar-4-white.svg');
+      }
+      a {
+        color: #FFF;      
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0px;
+          top: 0;
+          background-color: #fff;
+          width: 20px;
+          height: 20px;
+          background-image: url('@img/sidebar/top-right.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;  
+        }
+      }     
+    }
+  }
+}
+
+.sidebar {
+
+  &-content {
+    padding-top: 17px;
+    &__title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 35px;
+      position: relative;
+      margin-bottom: 11px;
+     
+      &::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('@img/chat/folder.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+ .accordion__icon.active {
+   transform: rotate(180deg);
+ }
+ .accordion__title span {
+   color: $orange-color;
+ }
+}
+.sidebar__person-count {
+  width: 24px;
+  height: 24px;
+  background-color: $orange-color;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;  
+}
+.sidebar-add-folder {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: #EC3B33;  
+  margin-top: 30px;
+}
+.sidebar-add-folder {
+  width: 100%;
+  text-align: end;
+  padding-right: 45px;
+  padding-left: 34px;
+  position: relative;
+  padding-bottom: 30px;
+  @media (max-width: 991px){
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(50%);
+    background-image: url('@img/chat/add-folder.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.sidebar__person-list {
+  transition: all .2s linear;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+  padding-bottom: 0;
+  &.show {
+    max-height: fit-content;
+    opacity: 1;
+  }
+}
+
+.sidebar__person-list.active {
+  max-height: fit-content;
+  opacity: 1;
+  padding-bottom: 12px;
+}
+.sidebar-sm {
+  padding-top: 35px;
+  padding: 35px 10px 10px;
+}
+.sidebar-pers-sm {
+  padding-top: 35px;
+  padding: 35px 10px 10px;
+}

@@ -1,0 +1,210 @@
+// prices
+.prices { 
+  overflow: hidden;
+  &__title {
+    margin-right: 30px;
+    @media (max-width: 575px){
+      margin-bottom: 15px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+   justify-content: space-between;
+   gap: 0 30px;
+   margin-top: 45px;
+  }
+  &__item {
+    grid-column: 4 span;
+    background-color: #fff;
+    overflow: hidden;
+    // padding: 45px 30px 0;
+    border-radius: 25px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-image: url('@img/prices/prices-top-right.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 76px;
+      height: 76px;
+      background-size: cover;
+    }
+    &-subtitle { 
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      color: #1E1E1E;
+      @media (max-width: 1199px){
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      color: #1E1E1E;      
+      margin-bottom: 30px;
+      @media (max-width: 1199px){
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 15px;
+      }
+    }
+    &-descr {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      color: #1E1E1E;      
+      max-width: 240px;
+      margin: 0 auto;
+      @media (max-width: 991px){
+        font-size: 12px;
+        line-height: 21px;
+      }
+    }
+    &-top {
+      padding-bottom: 45px;
+      position: relative;
+      padding-top: 45px;
+      @media (max-width: 991px){
+        padding-top: 25px; 
+        padding-bottom: 25px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        background-color: $orange-color;
+        width: 120px;
+        height: 4px;
+      }
+    }
+    &-center {
+      padding-top: 45px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      padding-bottom: 25px;
+      @media (max-width: 991px){
+        padding-top: 25px;
+      }
+    }
+    &-bottom {
+      background-color: #F26C4F;   
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #FFFFFF;     
+      padding: 20px 0; 
+    }
+    &-list {
+      min-height: 204px;
+      @media (max-width: 767px){
+        min-height: 111px;
+      }
+      li {        
+        text-align: start;
+        display: flex;
+        align-items: start;
+        margin-bottom: 20px;
+        color: #1E1E1E;   
+        @media (max-width: 1199px){
+          margin-bottom: 12px;
+        }     
+        @media (max-width: 991px){
+          font-size: 10px;
+          line-height: 16px;
+        }
+        &::before {
+          content: '';
+          width: 22px;
+          height: 22px;
+          margin-right: 17px;
+          background-image: url('@img/icons/check-arrow-orange.svg');
+          min-width: 22px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          top: 3px;
+          @media (max-width: 991px){
+            width: 11px;
+            height: 11px;
+            min-width: 11px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .tabs__content {
+    margin-top: 45px;
+    @media (max-width: 991px){
+      margin-top: 25px;
+    }
+  }
+  .swiper-wrapper {
+    @media (min-width: 992px){
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 0 30px;
+    }  
+  }
+  .swiper-slide {
+    transition: opacity .2s linear;
+  }
+  .swiper-slide-next {
+    @media (max-width: 991px){
+      opacity: .3;
+      transition: opacity .2s linear;
+    }   
+  }
+  .swiper {
+    @media (max-width: 991px){
+      overflow: visible;
+    }   
+    @media (max-width: 575px){
+      padding-right: 75px;
+    } 
+  }
+}
+.tabs__nav-item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.tabs__nav-btn {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #4F4F4F;  
+  transition: color .2s linear;
+  @media (max-width: 575px){
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &:hover {
+    color: $orange-color;
+    opacity: 1;
+  }
+  &:focus {
+    background-color: transparent;
+    color: $orange-color;
+  }
+  &--active {
+    color: $orange-color;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,47 @@
+
+.navigation__arrow {
+  opacity: .8;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &.swiper-button-disabled {
+    opacity: .4;
+  }
+}
+.navigation-prev {
+  margin-right: 12px;  
+}
+
+// reviews
+.reviews, .news {
+
+  .navigation__arrow {
+    width: 37px;
+    height: 21px;  
+    opacity: .8;
+    cursor: pointer;
+    transition: background .2s linear, opacity .2s linear;
+    &:hover {
+      opacity: 1;
+    }   
+  }
+  .navigation-prev {
+    background: url('@img/icons/arrow-left-orange-slider.svg') no-repeat center center / contain;
+    &.swiper-button-disabled {
+      background: url('@img/icons/arrow-left-gray-slider.svg') no-repeat center center / contain;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  .navigation-next {  
+    background: url('@img/icons/arrow-right-orange-slider.svg') no-repeat center center / contain;
+    &.swiper-button-disabled {
+      background: url('@img/icons/arrow-right-gray-slider.svg') no-repeat center center / contain;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+// reviews
+.reviews {
+  padding-top: 0;
+ .container {
+   padding-top: 45px;
+   position: relative;
+   &::before {
+    content: '';
+    position: absolute;
+    top: 0;   
+    background-color: #CCCCCC;
+    height: 1px;
+    width: 100%;
+    left: 0;
+  }
+ }
+
+  @media (max-width: 991px){
+    overflow: hidden;
+  }
+
+  &__title {
+    color: $main-color;
+  }
+  &__slider {
+    @media (max-width: 991px){
+      overflow: visible;
+    }
+    @media (max-width: 575px){
+      padding-right: 75px;
+    }
+  }
+  &__slide { 
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      @media (max-width: 991px){
+        flex-direction: column; 
+      }
+      @media (max-width: 767px){
+        align-items: flex-start;
+      }
+    }   
+    &-img {
+      cursor: pointer;
+      transition: opacity .2s linear;
+      position: relative;
+      height: 300px;
+      width: 260px;
+      img {       
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }   
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        background: #F6F3F2 url('@img/reviews/top-right.svg') no-repeat center center / contain;
+        width: 30px;
+        height: 30px;
+      } 
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 23px;
+        height: 27px;
+        background: url('@img/reviews/zoom.svg') no-repeat center center / contain;
+        cursor: pointer;
+      }
+      &:hover {
+        opacity: .7;
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-content {
+        width: 650px;
+        margin-left: 30px;
+        @media (max-width: 991px){
+          width: unset;
+        }
+        @media (max-width: 767px){
+          margin-left: 0;
+        }
+    }
+    &-top {
+      position: relative;     
+      padding: 115px 50px 0;
+      margin-bottom: 30px;
+      @media (max-width: 991px){
+        font-size: 10px;
+        line-height: 16px;
+        padding-top: 65px;
+      }
+      @media (max-width: 767px){
+        padding-left: 0;       
+        padding-right: 10px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        background-image: url('@img/icons/quotes.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        @media (max-width: 991px){
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }    
+    &-bottom {
+      padding-left: 50px;
+      align-items: center;
+      display: flex;
+      @media (max-width: 767px){
+        padding-left: 0;
+      }
+    }
+    &-person {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-name {    
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #1E1E1E;    
+      margin-left: 30px;
+      max-width: 130px;
+    }
+  }
+  .swiper-wrapper {
+    align-items: center;
+  }
+  .swiper-slide {
+    width: auto;  
+    transition: opacity .2s linear;
+  }
+  .swiper-slide-next {
+    @media (max-width: 991px){
+      opacity: .3;
+      transition: opacity .2s linear;
+    }   
+  }
+}

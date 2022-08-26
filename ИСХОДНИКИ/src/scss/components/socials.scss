@@ -1,0 +1,14 @@
+// socials
+.socials {
+  &__list {
+    li {
+			transition: .2s linear;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+			&:hover {
+				opacity: .6;
+			}
+    }
+  }
+}

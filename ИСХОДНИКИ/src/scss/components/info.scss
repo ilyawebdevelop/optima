@@ -1,0 +1,125 @@
+// info
+.info {
+  background-color: #fff;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    padding-left: 35px;
+    @media (max-width: 991px){
+      padding-left: 0;
+    }
+  }
+}
+.accordion {
+  margin-bottom: 10px;
+}
+
+.accordion__control {
+	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	background-color: transparent;
+	cursor: pointer;
+  background: #F6F3F2;
+  border-radius: 25px;  
+  text-align: left;
+  padding: 10px 30px;
+  @media (max-width: 991px){
+    padding: 10px 15px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.accordion__content {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0 20px;
+	will-change: max-height;
+	transition: all 0.3s ease-out;
+	box-sizing: content-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F4F4F;    
+  background: #F6F3F2;  
+  @media (max-width: 991px){
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;    
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F4F4F;   
+    @media (max-width: 991px){
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;    
+    }     
+  }
+}
+
+.accordion__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: #1E1E1E;    
+  @media (max-width: 991px){
+    font-size: 12px;
+    line-height: 21px;
+  }
+}
+
+.accordion__icon {
+	transition: transform 0.3s ease-out;
+  min-width: 10px;
+}
+.open .accordion__control {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.open .accordion__icon {
+	transform: rotate(180deg);
+}
+
+.open .accordion__content {
+	opacity: 1;
+	padding: 20px;
+  @media (max-width: 991px){
+    padding-top: 0;
+  }
+}
+.info-download {
+  margin-top: 30px;
+  a {
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #EC3B33;    
+    margin-bottom: 12px;
+    position: relative;
+    @media (max-width: 991px){
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 24px;
+      height: 24px;
+      background: url('@img/info/download.svg') no-repeat center center / cover;
+      @media (max-width: 991px){
+        top: 0;
+      }
+    }
+  }
+}

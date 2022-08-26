@@ -1,0 +1,68 @@
+<!-- register -->
+<section class="register" id="register">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="register__title section-title">
+          Регистрация
+        </h2>
+        <p class="register__descr">Описание, зачем мне нужно регистрироваться, что мне даст регистрация</p>
+        <form class="contacts__form">
+          <div class="contacts__form-content">
+            <div class="contacts__form-row">
+              <input class="contacts__form-input input-person" type="text" placeholder="ФИО">
+            </div>
+            <div class="contacts__form-row">
+              <input class="contacts__form-input input-mail" type="email" placeholder="Email">
+             
+            </div>
+            <div class="contacts__form-row">
+              <input class="contacts__form-input input-tel" type="tel" placeholder="Телефон">
+            </div>
+            <div class="contacts__form-row password">
+              <input class="contacts__form-input input-pass" type="password" placeholder="Пароль" id="register-password">
+              <div class="show-pass" onclick="showPass()"></div>
+            </div>
+            <div class="contacts__form-row">
+              <input class="contacts__form-input input-pass" type="password" placeholder="Повторите пароль*">             
+            </div>
+          </div>
+          <div class="register__form-bottom">
+            <div class="contacts__form-agreements">
+              <input type="checkbox" id="contacts__form-notification">
+              <label for="contacts__form-notification">Согласен получать уведомления на указанный email-адрес</label>
+            </div>
+            <div class="contacts__form-agreements">
+              <input type="checkbox" id="contacts__form-personal">
+              <label for="contacts__form-personal">Соглашаюсь с <a href="#">Политикой Обработки Персональных Данных</a> </label>
+            </div>
+            <div class="register-btn-wrapper">
+              <button class="register__btn contacts__form-btn">
+                <span>Зарегистрироваться</span>               
+              </button>
+              <div class="register-btn-text">
+                <span>Уже зарегистрированы?</span>
+                <a href="#">Войти</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6">
+       <div class="register__img">
+         <img src="@img/register/register-img.png" alt="image">
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function showPass() {
+  var x = document.getElementById("register-password");
+  if (x.type === "password") {
+      x.type = "text";
+  } else {
+      x.type = "password";
+  }
+}
+</script>
