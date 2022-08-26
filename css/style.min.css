@@ -12527,7 +12527,7 @@ h4 {
   }
 }
 .team .swiper {
-  padding-right: 50px;
+  padding-right: 100px;
 }
 @media (max-width: 991px) {
   .team .swiper {
@@ -14077,6 +14077,7 @@ h4 {
 @media (max-width: 991px) {
   .profile {
     padding-top: 0;
+    padding-bottom: 30px;
   }
 }
 .profile__name {
